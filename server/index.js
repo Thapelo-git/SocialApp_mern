@@ -17,7 +17,7 @@ import { verifyToken } from "./middleware/auth.js";
 import User from "./model/User.js"
 import {users,posts} from "./data/index.js"
 import Post from "./model/Posts.js";
-import validateEnv from "./util/validateEnv.js";
+// import validateEnv from "./util/validateEnv.js";
 // CONFIGURATIONS
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
