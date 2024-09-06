@@ -1,4 +1,5 @@
 import { Box,Typography,useTheme,useMediaQuery } from "@mui/material"
+import Form from "./Form";
 
 const LoginPage = () => {
   const theme = useTheme();
@@ -12,7 +13,7 @@ const LoginPage = () => {
       fontSize="32px"
       color="primary"
      >
-        E-society
+        E-society Blog
       </Typography>
       </Box>
       <Box width={isNonMobileScreens? "50%" :"93%"}
@@ -21,7 +22,7 @@ const LoginPage = () => {
       borderRadius="1.5rem "
       backgroundColor={theme.palette.background.alt}>
         <Typography fontWeight="500" sx={{mb:"1.5rem"}}>
-
+        <Form/>
         </Typography>
       </Box>
     </Box>

@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux'
 import { setLogin } from '../../state'
 import Dropzone from "react-dropzone"
 import FlexBetween from '../../components/FlexBetween'
-import { register } from 'module'
+
 
 const registerSchema =yup.object().shape({
     firstName:yup.string().required("required"),
@@ -141,27 +141,7 @@ const Form = () => {
                         helperText={touched.lastName && errors.LastName}
                         sx={{gridColumn:"span 2"}}
                         />
-                                 <TextField 
-                        label="Email "
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        value={values.email}
-                        name="Email"
-                        error={Boolean(touched.email) && Boolean(errors.email)}
-                        helperText={touched.email && errors.email}
-                        sx={{gridColumn:"span 2"}}
-                        />
-                                 <TextField 
-                        label="password"
-                        onBlur={handleBlur}
-                        onChange={handleChange}
-                        value={values.password}
-                        name="Password"
-                        type='password'
-                        error={Boolean(touched.password) && Boolean(errors.password)}
-                        helperText={touched.password && errors.password}
-                        sx={{gridColumn:"span 2"}}
-                        />
+                    
                                  <TextField 
                         label="Location"
                         onBlur={handleBlur}
@@ -232,7 +212,7 @@ const Form = () => {
                         onBlur={handleBlur}
                         onChange={handleChange}
                         value={values.password}
-                        name="Password"
+                        name="password"
                         type="password"
                         error={Boolean(touched.password) && Boolean(errors.password)}
                         helperText={touched.password && errors.password}
