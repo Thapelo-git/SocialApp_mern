@@ -23,7 +23,7 @@ const Navbar = () => {
   const background = theme.palette.background.default;
   const primaryLight =theme.palette.primary.light;
   const alt = theme.palette.background.alt;
-  // const fullName = `${user.firstName} ${user.lastName}`;
+  const fullName = `${user.firstName} ${user.lastName}`;
   return <FlexBetween padding="1rem 6%" backgroundColor={alt}>
     <FlexBetween gap="1.75rem">
       <Typography fontWeight="bold"
@@ -64,10 +64,10 @@ const Navbar = () => {
         <Notifications sx={{fontSize:"25px"}}/>
         <Help sx={{fontSize:"25px"}}/>
         <FormControl variant='standard'
-        //  value={fullName}
+         value={fullName}
          >
           <Select 
-          // value={fullName}
+          value={fullName}
           sx={{
             backgroundColor:neutralLight,
             width:"150px",
@@ -84,9 +84,9 @@ const Navbar = () => {
           input ={<InputBase/>}
           >
             <MenuItem 
-            // value={fullName}
+            value={fullName}
             >
-            {/* <Typography>{fullName}</Typography> */}
+            <Typography>{fullName}</Typography>
             </MenuItem>
             <MenuItem onClick={()=>dispatch(setLogout())}>Log Out</MenuItem>
           </Select>
@@ -135,10 +135,10 @@ const Navbar = () => {
         <Notifications sx={{fontSize:"25px"}}/>
         <Help sx={{fontSize:"25px"}}/>
         <FormControl variant='standard'
-        //  value={fullName}
+         value={fullName}
         >
           <Select 
-          // value={fullName}
+          value={fullName}
           sx={{
             backgroundColor:neutralLight,
             width:"150px",
@@ -155,9 +155,9 @@ const Navbar = () => {
           input ={<InputBase/>}
           >
             <MenuItem 
-            // value={fullName}
+            value={fullName}
             >
-            {/* <Typography>{fullName}</Typography> */}
+            <Typography>{fullName}</Typography>
             </MenuItem>
             <MenuItem onClick={()=>dispatch(setLogout())}>Log Out</MenuItem>
           </Select>

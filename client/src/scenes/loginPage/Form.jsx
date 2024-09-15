@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Box,Button,TextField,useMediaQuery,Typography,useTheme } from '@mui/material'
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined"
-import {Formik, formik} from "formik"
+import {Formik, } from "formik"
 import * as yup from "yup"
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -43,11 +43,11 @@ const initialValuesLogin ={
 }
 const Form = () => {
     const [pageType,setPageType]=useState("login")
-    const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+    
     const {palette} =useTheme();
     const dispatch =useDispatch();
     const navigate = useNavigate();
-    const isNonMobile = useMediaQuery("(min-width:600px")
+    const isNonMobile = useMediaQuery("(min-width:600px)");
     const isLogin = pageType === "login";
     const isRegister =pageType === "register";
 
@@ -62,6 +62,7 @@ const Form = () => {
         const savedUserResponse =await fetch(
             "http://localhost:3001/auth/register",{
                 method:"POST",
+             
                 body:formData,
             }
         )
@@ -136,9 +137,9 @@ const Form = () => {
                         onBlur={handleBlur}
                         onChange={handleChange}
                         value={values.lastName}
-                        name="LastName"
+                        name="lastName"
                         error={Boolean(touched.lastName) && Boolean(errors.lastName)}
-                        helperText={touched.lastName && errors.LastName}
+                        helperText={touched.lastName && errors.lastName}
                         sx={{gridColumn:"span 2"}}
                         />
                     
@@ -197,6 +198,7 @@ const Form = () => {
                        
                         </>
                     )}
+                    
                      <TextField 
                         label="Email"
                         onBlur={handleBlur}
@@ -237,8 +239,9 @@ const Form = () => {
                     </Button>
                     <Typography 
                     onClick={()=>{
-                        setPageType(isLogin ? "register" : "login");
                         resetForm();
+                        setPageType(isLogin ? "register" : "login");
+                        
                     }}
                     sx={{
                         textDecoration:"underline",
