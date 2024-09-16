@@ -36,7 +36,7 @@ const Navbar = () => {
           cursor:"pointer"
         }
       }}>
-        E-society
+        E-society Blog
       </Typography>
       {
         isNonMobileScreens &&(

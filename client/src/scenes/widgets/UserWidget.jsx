@@ -31,7 +31,7 @@ const UserWidget = ({userId,picturePath})=>{
 
     useEffect(()=>{
         getUser();
-    },[])
+    },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
     if(!user){
         return null;
@@ -62,7 +62,8 @@ const UserWidget = ({userId,picturePath})=>{
                             }
                         }}
                         >
-                          m  {firstName} {lastName}
+                          
+                            {firstName} {lastName}
                         </Typography>
                         <Typography color={medium}>
                             {/* {friends.length}  */}
